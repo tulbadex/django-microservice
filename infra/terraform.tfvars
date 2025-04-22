@@ -1,0 +1,7 @@
+region              = "us-east-2"
+aws_access_key      = "AKIAVA5YK3D4Y4IMKSFA"
+aws_secret_key      = "49iodWRWrtcCSXy+QjhCKoTOY1W4uCWudoQCSEYTL"
+instance_type       = "t3.medium"
+min_size            = "1"
+max_size            = "2"
+desired_capacity    = "1"

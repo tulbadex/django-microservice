@@ -1,0 +1,53 @@
+# create project directory
+mkdir project-name
+# create virtual environment
+py -3 -m venv .venv
+# activate virtual environment
+.venv\Scripts\activate
+# upgrade pip
+python.exe -m pip install --upgrade pip
+# install from the project directory
+django-admin startproject config .
+# create app api
+python manage.py startapp api
+# create directory in powershell
+New-Item -ItemType Directory -Path .github\workflows, infra
+# create directoryin cmd
+mkdir .github\workflows infra
+# create readme and .env.example file
+touch .env.example README.md
+# install neccessary packages
+pip install django djangorestframework celery redis flower python-dotenv drf-yasg
+pip install -U Celery
+pip install "celery[redis]"
+# install djangorestframework simplejwt
+pip install djangorestframework-simplejwt
+# install cors header
+pip install django-cors-headers
+# add all dependency package to requirementsx.txt file
+pip freeze > requirements.txt
+# create celery configuration
+touch config/celery.py config/tasks.py
+# install postgressql package and add to requirements file
+pip install psycopg2-binary
+pip freeze > requirements.txt
+# Update settings.py with PostgreSQL config
+# Then run:
+python manage.py makemigrations
+python manage.py migrate
+# install environmental variable reference
+pip install python-decouple
+# to debug response
+import pdb
+pdb.set_trace()
+# run celery on local
+# Run this with more verbose logging
+celery -A config worker --loglevel=info
+# Terraform
+# get aws credentials
+aws sts get-caller-identity
+{
+    "UserId": "AIDA5MSUBJTYUGEYQZUNZ",
+    "Account": "920372099155",
+    "Arn": "arn:aws:iam::920372099155:user/terraform-user"
+}
